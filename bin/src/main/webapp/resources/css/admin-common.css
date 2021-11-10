@@ -1,0 +1,35 @@
+.hide{position: absolute; top:-999em;}
+/*.header{width:100%; height:90px; background-color:#00adb5; float:left;}*/
+.header{width:100%; height:11%; background-color:#00adb5; float:left;}
+/*logo*/
+.logo{width:85%; height:90px; float:left;}
+.logo li{display: inline-block; width:200px; height:100px;}
+.logo li a{display: block;}
+.logo li a > div{margin-top:3px;}
+.logo li a > div img{width:100%; height:99%;}
+/*메뉴 js 효과*/
+.sub_nav_list > li.on > a{color:#f7538f; font-weight: bold;}
+.sub_nav.on + .sub_nav_box {background-color: #fff;}
+.sub_nav.on {background-color : #ffffff; border-left : 4px solid #019198; }
+/*관리자로그인*/
+.lnb_login{width:15%; float:right;}
+.lnb_login li{display: inline-block; list-style: none; line-height:6.5em;}
+.lnb_login li a{color:#fff;}
+
+
+
+/*사이드 메뉴*/
+#wrapper {width:100%; display: flex; min-height:89%;}
+.left_wrap{width:15%; max-width:270px; background-color:#f5f5f5; float:left;}
+.sub_nav{width:100%; height:80px;}
+.sub_nav li{width:100%; height:100%; }
+.sub_nav li a{width:100%; height:100%; display: block;}
+.sub_nav_title{color:#333333; font-weight: bold; font-size:16px; padding-left:20px; line-height: 5em;}
+.sub_nav_box{width:100%;}
+.sub_nav_list{width:auto; height:100%;}
+.sub_nav_list li{width:auto; height:35px; padding:0px 0px 0px 45px; font-size: 15px;  line-height: 2.5em;}
+.sub_nab_list li a{display: block;}
+
+
+/*컨텐츠영역*/
+.admin_contents{width:83.5%; padding-left:1.5%; max-width:100%; float:left;}

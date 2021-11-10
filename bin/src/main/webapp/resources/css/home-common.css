@@ -1,0 +1,255 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.4;
+    font-family: 'Noto Sans KR', sans-serif;
+    word-break: keep-all;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+
+/* ===== COMMON CLASS ===== */
+
+/* font */
+@font-face {
+    font-family: 'KoPubDotumMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.gowunDodum {font-family: 'Gowun Dodum', sans-serif;}
+
+.bold {font-weight: 700;}
+
+.tac {text-align: center;}
+
+.c-white {color: #fff;}
+.c-yellow {color: #fdd219;}
+.c-orange {color: #f78828;}
+.c-red {color: #fa5456;}
+.c-mint {color: #06b2bb;}
+
+
+/* margin, padding */
+.mb10 {margin-bottom: 10px;}
+.mb20 {margin-bottom: 20px;}
+.mb30 {margin-bottom: 30px;}
+.mb40 {margin-bottom: 40px;}
+.mb60 {margin-bottom: 60px;}
+.mb80 {margin-bottom: 80px;}
+.mb100 {margin-bottom: 100px;}
+.mb120 {margin-bottom: 120px;}
+
+/* container */
+.content-wrap {padding: 60px 0;}
+
+/* button style */
+.abtn {display: inline-block; padding: 7px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin: 0 6px; transition: all .3s;}
+.abtn.big {padding: 8px 30px; font-size: 15px; margin: 0 auto;}
+.abtn.abtn-mint {background: #06b2bb; color: #fff; border: 2px solid #06b2bb;}
+.abtn.abtn-gray {background: #fff; color: #06b2bb; border: 2px solid #06b2bb;}
+.abtn.abtn-mint:hover {background: #999; border-color: #999;}
+.abtn.abtn-gray:hover {background: #999; border-color: #999; color: #fff;}
+
+
+
+/* ===== HEADER ===== */
+#header {position: fixed; top: 0; left: 0; width: 100%; height: 60px; z-index: 100; box-shadow: 0 5px 12px rgba(100,100,100,.1);}
+.head-inner {display: flex; justify-content: space-between; width: 100%; height: 100%; padding: 0 20px; background: #fff;}
+.logo {width: 105px; height: 60px; background: #00adb5 url(../img/logo_basic.PNG) no-repeat 50% 50%/contain;}
+.logo a {display: block; width: 100%; height: 100%;}
+
+.util-box {margin-right: 60px;}
+.util-box ul {height: 100%; display: flex; align-items: center;}
+
+#gnb {position: fixed; top: 0; left: 220px; width: 100%; max-width: 720px; z-index: 110; display: none;}
+#gnb ul {display: flex;}
+#gnb ul li a {
+    position: relative; 
+    display: block; 
+    width: 140px; 
+    height: 80px; 
+    line-height: 80px; 
+    text-align: center; 
+    font-size: 18px; 
+    font-weight: 500; 
+    color: #555; 
+    transition: all .3s;
+}
+#gnb ul li a:after {
+    content: ''; 
+    position: absolute; 
+    bottom: 0; 
+    left: 50%; 
+    transform: translate(-50%, 0);
+    width: 0; 
+    height: 4px; 
+    background: #00adb5; 
+    transition: all .3s;
+}
+#gnb ul li a:hover {background: #fff; color: #00adb5;}
+#gnb ul li a:hover:after {width: 40px;}
+
+
+.m-menu-btn {
+    position: fixed; 
+    top: 0; 
+    right: 20px; 
+    width: 60px; 
+    height: 60px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    z-index: 120;
+}
+.m-menu-btn > div {position: relative; width: 30px; height: 26px; cursor: pointer;}
+.m-menu-btn span {
+    position: absolute; 
+    left: 0; 
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: #00adb5; 
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+.m-menu-btn span:nth-child(1) {top: 0;}
+.m-menu-btn span:nth-child(2),
+.m-menu-btn span:nth-child(3) {top: calc(13px - 2px);}
+.m-menu-btn span:nth-child(4) {top: calc(26px - 4px);}
+
+.m-menu-btn.on span:nth-child(1),
+.m-menu-btn.on span:nth-child(4) {top: calc(13px - 1.5px); width: 0%; left: 15px;}
+.m-menu-btn.on span:nth-child(2) {width: 120%; transform: rotate(45deg);}
+.m-menu-btn.on span:nth-child(3) {width: 120%; transform: rotate(-45deg);}
+
+
+#mGnb {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100vh; 
+    background: #f5f5f5; 
+    z-index: 110;
+    display: none;
+}
+#mGnb > div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mGnb ul li {margin: 40px 0;}
+#mGnb ul li a {
+    position: relative; 
+    display: block; 
+    text-align: center; 
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 500; 
+    color: #555;
+}
+
+
+
+
+/* ===== FOOTER ===== */
+#footer {background: #333; color: #fff; padding: 20px 0;}
+
+
+
+
+
+/* ===== Media Query ===== */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #header {height: 60px;}
+}
+
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #header {height: 70px;}
+
+    /* header */
+    #header {height: 80px;}
+    .head-inner {padding: 0 60px;}
+    .logo {width: 140px; height: 80px;}
+
+    #gnb {display: block;}
+    .m-menu-btn {display: none;}
+
+}
+
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    /* container */
+    .content-wrap {padding: 80px 0;}
+
+    /* button style */
+    .abtn {padding: 8px 16px; border-radius: 6px; font-size: 16px;}
+    .abtn.big {padding: 12px 35px; font-size: 16px;}
+
+
+
+
+}
+
+

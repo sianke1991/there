@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+
+</head>
+<body>
+    <header id="header">
+        <div class="head-inner">
+            <h1 class="logo"><a href="/index.html"></a></h1>
+            <div class="util-box">
+                <ul>
+                    <li><a class="abtn abtn-gray" href="/member/join.html">마이페이지</a></li>
+                    <li><a class="abtn abtn-mint" href="/member/login.html">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- // header -->
+    
+    <nav id="gnb">
+        <ul>
+            <li><a href="/magazine/magazine_list.html">매거진</a></li>
+            <li><a href="/places/place-by-loc.html">지역별</a></li>
+            <li><a href="/places/palce-by-cate.html">카테고리별</a></li>
+        </ul>
+    </nav>
+    <!-- // nav -->
+
+
+    <main class="mypage-page">
+        <div class="content-wrap">
+                <div class="tit-sect tac">
+                    <div class="container">
+                        <h2 class="sect-tit mb30">마이페이지 🧐</h2>
+                        <p class="sect-desc mb10">개인정보 조회/수정</p>
+                    </div>
+                </div>
+
+                <div class="my-info-sect mb100">
+                    <div class="container">
+                        <div>
+                            <ul>
+                                <li>
+                                    <span>아이디</span>
+                                    <p>sordy24</p>
+                                </li>
+                                <li>
+                                    <span>비밀번호</span>
+                                    <p>*****</p>
+                                </li>
+                                <li>
+                                    <span>이름</span>
+                                    <p>김OO</p>
+                                </li>
+                                <li>
+                                    <span>전화번호</span>
+                                    <p>010-1234-5678</p>
+                                </li>
+                                <li>
+                                    <span>이메일</span>
+                                    <p>sordy@naver.com</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn btn-modi" data-toggle="modal" data-target="#myModal">개인정보수정 ⚙️</button> <!-- 모달창 띄워서 수정하기 -->
+                    </div>
+                </div>
+
+                <div class="my-activity-sect">
+                    <div class="container">
+                        <div class="my-like-places mb100">
+                            <div class="my-tit">
+                                <h3 class="mb30">내가 ❤️좋아하는 장소</h3> <!-- 최근 좋아요누른 장소 4개만 노출 -->
+                                <a class="abtn abtn-mint" href="">더보기</a> <!-- 더보기 구현하면 좋으나 우선 버튼만 있는걸로 -->
+                            </div>
+                            <div>
+                                <ul class="row">
+                                    <li class="col-md-3">
+                                        <div class="img-wrap">
+                                            <div style="background-image: url(../img/place/palce_thumb01.jpg);"></div>  <!-- 내가 좋아요한 장소 썸네일, 장소명 가져오기 -->
+                                        </div>
+                                        <strong>성수 OO카페 👫</strong>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="img-wrap">
+                                            <div style="background-image: url(../img/place/palce_thumb01.jpg);"></div>
+                                        </div>
+                                        <strong>성수 OO카페22 👫</strong>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="img-wrap">
+                                            <div style="background-image: url(../img/place/palce_thumb01.jpg);"></div>
+                                        </div>
+                                        <strong>성수 OO카페333 👫</strong>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="img-wrap">
+                                            <div style="background-image: url(../img/place/palce_thumb01.jpg);"></div>
+                                        </div>
+                                        <strong>성수 OO카페333 👫</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="my-like-magazines mb100">
+                            <div class="my-tit">
+                                <h3 class="mb30">내가 ❤️좋아하는 포스팅</h3>  <!-- 최근 좋아요누른 포스팅 4개만 노출 -->
+                                <a class="abtn abtn-mint" href="">더보기</a> <!-- 더보기 구현하면 좋으나 우선 버튼만 있는걸로 -->
+                            </div>
+                            <div>
+                                <ul class="row">
+                                    <li class="col-md-3">
+                                        <div class="img-wrap">
+                                            <div style="background-image: url(../img/magazine/wm_img01.jpg);"></div>  <!-- 내가 좋아요한 포스팅 썸네일, 제목 가져오기 -->
+                                        </div>
+                                        <strong>떠나자 단풍 구경! 🍁</strong>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="img-wrap">
+                                            <div style="background-image: url(../img/magazine/wm_img01.jpg);"></div>
+                                        </div>
+                                        <strong>떠나자 단풍 구경! 🍁</strong>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="img-wrap">
+                                            <div style="background-image: url(../img/magazine/wm_img01.jpg);"></div>
+                                        </div>
+                                        <strong>떠나자 단풍 구경! 🍁</strong>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="img-wrap">
+                                            <div style="background-image: url(../img/magazine/wm_img01.jpg);"></div>
+                                        </div>
+                                        <strong>떠나자 단풍 구경! 🍁</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="my-reviews">
+                            <div class="my-tit">
+                                <h3 class="mb30">내가 작성한 리뷰 📝</h3>  <!-- 최근 작성한 리뷰 3개만 노출 -->
+                                <a class="abtn abtn-mint" href="">더보기</a> <!-- 더보기 구현하면 좋으나 우선 버튼만 있는걸로 -->
+                            </div>
+                            <div class="review-list">
+                                <ul>
+                                    <li>
+                                        <span>⭐⭐⭐⭐</span>
+                                        <p>아주 좋았어요 :D</p>
+                                    </li>
+                                    <li>
+                                        <span>⭐⭐⭐⭐</span>
+                                        <p>아주 좋았어요 :D</p>
+                                    </li>
+                                    <li>
+                                        <span>⭐⭐⭐⭐</span>
+                                        <p>아주 좋았어요 :D</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+        </div>
+        <!-- // content-wrap  -->
+
+    </main>
+    <!-- // main -->
+
+
+    <footer id="footer">
+    <div class="container">
+        <div class="foot-info-link">
+            <p>&copy; 2021 OFFLineTeam All Rights Reserved.</p>
+        </div>
+
+    </div>
+    </footer>
+    <!-- // footer -->
+
+
+
+
+    <!-- 개인정보 수정 모달 -->
+    <div class="my-info-edit modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">개인정보 수정</h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <ul>
+                        <li>
+                            <span>아이디</span>
+                            <p>sordy24</p>
+                        </li>
+                        <li>
+                            <label>비밀번호</label>
+                            <input type="password" value="1234">
+                        </li>
+                        <li>
+                            <span>이름</span>
+                            <p>김OO</p>
+                        </li>
+                        <li>
+                            <label>전화번호</label>
+                            <input type="tel" name="" id="" value="010-1234-5678">
+                        </li>
+                        <li>
+                            <label>이메일</label>
+                            <input type="email" name="" id="" value="sordy@naver.com">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+                <button type="button" class="btn">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

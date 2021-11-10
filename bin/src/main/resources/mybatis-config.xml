@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	
+	<typeAliases>
+		<typeAlias type="kr.co.there.place.model.entity.PlaceVo" alias="plbean"/>
+		<typeAlias type="kr.co.there.mzbbs.model.entity.MzbbsVo" alias="mzbean"/>
+		<typeAlias type="kr.co.there.member.model.entity.MemberVo" alias="mbrbean"/>
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="mapper/placeMapper.xml" />
+		<mapper resource="mapper/mzbbsMapper.xml"/>
+		<mapper resource="mapper/memberMapper.xml"/>
+	</mappers>
+	
+	
+</configuration>
+
+
+

@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:url value="/resources/img" var="imgPath" />
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link href="${pageContext.servletContext.contextPath }/resources/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+<link href="${pageContext.servletContext.contextPath }/resources/css/admin-reset.css" type="text/css" rel="stylesheet" />
+<link href="${pageContext.servletContext.contextPath }/resources/css/admin-common.css" type="text/css" rel="stylesheet" />
+<link href="${pageContext.servletContext.contextPath }/resources/css/admin-style.css" type="text/css" rel="stylesheet" />
+
+<!-- JS -->
+<script src="${pageContext.servletContext.contextPath }/resources/js/jquery-1.12.4.min.js"></script>
+<script src="${pageContext.servletContext.contextPath }/resources/js/bootstrap.min.js"></script>
+<script src="${pageContext.servletContext.contextPath }/resources/js/prefixfree.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        <!-- $(".sub_nav_box").hide(); -->
+        $(".sub_nav li").click(function() { 
+            $(".sub_nav_box").stop().slideUp(); 
+            $(this).parent(".sub_nav").next(".sub_nav_box").stop().slideDown();
+        });
+    });
+    
+    $(function() {
+        $('.admin_contents:not(:first)').hide();
+        $('.sub_nav_list > li').click(function() {
+            $('.admin_contents').hide();
+            var linkId = $(this).find('a').attr('href');
+            $(linkId).show();
+            $(this).addClass('on');
+            $(this).siblings().removeClass('on');
+        });
+
+        $('ul.sub_nav').click(function() {
+            $('.admin_contents').hide();
+            var linkId = $(this).data('href');
+            $(linkId).show();
+
+            $(this).addClass('on');
+            $(this).siblings().removeClass('on');
+        });
+    });        
+</script>
