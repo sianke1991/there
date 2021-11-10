@@ -23,7 +23,7 @@ public class MzbbsVo {
 	private String magazine_thumb;
 	private String magazine_hashtag;
 
-	public MzbbsVo() {}
+	public MzbbsVo() {}//
 
 	public MzbbsVo(int magazine_idx, String magazine_subject, Date magazine_date, int magazine_viewcnt,
 			String magazine_content, String magazine_thumb, String magazine_hashtag) {
